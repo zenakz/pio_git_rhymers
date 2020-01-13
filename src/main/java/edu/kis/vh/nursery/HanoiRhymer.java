@@ -1,13 +1,23 @@
 package edu.kis.vh.nursery;
 
+/**
+ * A class for Rhyming Hanoi, extending @DefaultCountingOutRhymer
+ */
 public class HanoiRhymer extends DefaultCountingOutRhymer {
 
 int totalRejected = 0;
 
+	/**
+	 * @return number of rejected
+	 */
 public int reportRejected() {
 	return totalRejected;
 }
 
+	/**
+	 * counting function, overring from superclass
+	 * @param in number to add
+	 */
 @Override
 public void countIn(int in) {
 if (!callCheck() && in > peekaboo())
@@ -16,4 +26,4 @@ if (!callCheck() && in > peekaboo())
 			super.countIn(in);
 }
 }
-//alt oraz strzałki przełączają między otwartymi opknami w środowisku
+//alt oraz strzałki przełączają między otwartymi oknami w środowisku
